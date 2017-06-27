@@ -50,6 +50,14 @@ var intervalCsaHead = setInterval(csaHead,8000);
           icon.addClass('ion-navicon');
           icon.removeClass('ion-close');
         }
-    });}
+    });
     
-  
+    /* show nav again once window is resized from mobile to computer nav, in this case 800px */
+  $(window).resize(function() {
+    var w = $(window).width();
+    var menu = $('nav ul');
+    if (w > 800 && menu.is(':hidden')) {
+        menu.removeAttr('style');
+    }
+    }); 
+});
