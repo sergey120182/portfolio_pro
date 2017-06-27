@@ -26,7 +26,16 @@ function csaHead(){
       }
   }
 var intervalCsaHead = setInterval(csaHead,8000);
-}
-
-
+/* For sticky nav */
+    $('.js--about-me').waypoint(function(direction) {
+        if (direction == "down") {
+            $('nav').addClass('sticky');
+        } 
+        else {
+            $('nav').removeClass('sticky');
+        }
+    }, { offset: '1px'}
+    );}
+    
+  
   
