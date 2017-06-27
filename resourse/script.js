@@ -35,7 +35,21 @@ var intervalCsaHead = setInterval(csaHead,8000);
             $('nav').removeClass('sticky');
         }
     }, { offset: '1px'}
-    );}
+    );
     
-  
+    /* Mobile nav */
+     $('.js--nav-icon').click(function() {
+          var nav = $('.js--main-nav');
+          var icon = $('.js--nav-icon i');
+          nav.toggle()
+      if (icon.hasClass('ion-navicon')) {
+          icon.addClass('ion-close');
+          icon.removeClass('ion-navicon');
+        } 
+      else {
+          icon.addClass('ion-navicon');
+          icon.removeClass('ion-close');
+        }
+    });}
+    
   
